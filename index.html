@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Expense Tracker Project</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div class="employee-info">
+            <form
+                class="expenesesForm"
+                name="myForm"
+                onsubmit="return(validate());"
+                method="POST"
+                action=""
+            >
+                <table>
+                    <tr>
+                        <td id="id">Employee ID:</td>
+                        <td>
+                            <input id="empID" name="empId" type="text" placeholder="Employee ID" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="name">Name:</td>
+                        <td>
+                            <input id="empname" type="text" placeholder="Name" name="empName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="using">Payment Mode:</td>
+                        <td>
+                            <select id="payment-mode" name="PaymentMode">
+                                <option class="" value="" selected disabled>
+                                    Select from the list
+                                </option>
+                                <option class="mode" value="card">Card</option>
+                                <option class="mode" value="cheque">Cheque</option>
+                                <option class="mode" value="cash">Cash</option>
+                                <option class="mode" value="other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="day">Date of Transaction:</td>
+                        <td><input id="date" type="date" name="Date" /></td>
+                    </tr>
+                    <tr>
+                        <td id="amount">Amount:</td>
+                        <td><input id="bill" type="number" name="Bill" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br />
+                            <input id="submit" type="submit" value="Submit" />
+                            <input id="reset" type="reset" value="Cancel" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <br />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Employee Id</th>
+                        <th>Name</th>
+                        <th>Mode of Transaction</th>
+                        <th>Date of Transaction</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="expenseTable"></tbody>
+            </table>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
