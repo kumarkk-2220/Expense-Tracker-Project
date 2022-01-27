@@ -69,18 +69,6 @@ document.getElementById("submit").addEventListener("click", (e) => {
         } else {
             return false;
         }
-        let cumulativeExpenseList = [];
-        for (j = 0; j < Object.keys(expenseList).length; j++) {
-            let obj = {};
-            obj[id] = expenseList[id];
-            obj[name] = expenseList[name];
-            obj[using] = expenseList[using];
-            obj[day] = expenseList[day];
-            obj[amount] = expenseList[amount];
-            cumulativeExpenseList.push(obj);
-            break;
-        }
-        console.log(cumulativeExpenseList);
     }
     output();
 });
