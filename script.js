@@ -49,7 +49,6 @@ document.getElementById("submit").addEventListener("click", (e) => {
         [amount, bill],
     ];
     let expenseList = Object.fromEntries(array);
-
     const expenseTable = document.getElementById("expenseTable");
 
     function output() {
@@ -62,13 +61,23 @@ document.getElementById("submit").addEventListener("click", (e) => {
                 <td>${expenseList[using]}</td>
                 <td>${expenseList[day]}</td>
                 <td>$${expenseList[amount]}</td>
+                <td><a class="deleteButton">Delete</td>
             </tr>
         `;
+                for (let i = 0; i < expenseTable.children.length; i++) {
+                    expenseTable.children[i]
+                        .querySelector(".deleteButton")
+                        .addEventListener("click", function () {
+                            this.parentNode.parentNode.remove();
+                        });
+                }
+
                 break;
             }
         } else {
             return false;
         }
     }
+
     output();
 });
