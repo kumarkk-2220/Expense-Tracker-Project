@@ -12,6 +12,6 @@ th {
     text-align: center;
 }
 
-.table #expenseTable .deleteButton {
+.deleteButton {
     cursor: pointer;
 }
