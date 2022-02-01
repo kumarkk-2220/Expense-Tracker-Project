@@ -31,6 +31,7 @@ document.getElementById("submit").addEventListener("click", (e) => {
         }
         return true;
     }
+
     let id = document.getElementById("id").innerText;
     let empId = document.getElementById("empID").value;
     let name = document.getElementById("name").innerText;
@@ -64,6 +65,7 @@ document.getElementById("submit").addEventListener("click", (e) => {
                 <td><a class="deleteButton">Delete</td>
             </tr>
         `;
+
                 for (let i = 0; i < expenseTable.children.length; i++) {
                     expenseTable.children[i]
                         .querySelector(".deleteButton")
@@ -80,4 +82,8 @@ document.getElementById("submit").addEventListener("click", (e) => {
     }
 
     output();
+    function clearData() {
+        document.getElementById("reset").click();
+    }
+    clearData();
 });
